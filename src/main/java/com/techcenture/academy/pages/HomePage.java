@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import java.util.Map;
+
 public class HomePage {
 
     private static WebDriver driver;
@@ -42,10 +44,9 @@ public class HomePage {
         Assert.assertTrue(newUserSignUpHeader.isDisplayed());
     }
 
-    public void enterSignUpCredentials(){
-        String fullName ="Joseph Greenberg";
-        nameInput.sendKeys(fullName);
-        emailAdressInput.sendKeys(fullName.replace(" ",".") + "@gmail1.com");
+    public void enterSignUpCredentials(Map<String ,String> data){
+        nameInput.sendKeys(data.get("FullName"));
+        emailAdressInput.sendKeys(data.get("Email"));
     }
     public void clickSignUpBtn(){
         signUpBtn.click();

@@ -55,7 +55,6 @@ public class BaseTest {
         Capabilities browserCap = ((RemoteWebDriver) driver).getCapabilities();
         browserName = browserCap.getBrowserName();
         browserVersion = browserCap.getBrowserVersion();
-        //extentReports = new ExtentReports(  System.getProperty("user.dir") + "/test-output/ExtentReports.html", true);
         extentReports = getInstance();
         extentReports.addSystemInfo("BROWSER NAME", browserName);
         extentReports.addSystemInfo("BROWSER VERSION", browserVersion);
@@ -81,20 +80,23 @@ public class BaseTest {
 
         extentReports.endTest(extentTest);
 
-        if (driver != null){
-            driver.quit();
-        }
+//        if (driver != null){
+//            driver.quit();
+//        }
     }
     @AfterTest
     public void afterTest(){
         extentReports.flush();
         extentReports.close();
-    }
-    public void tearDown(){
         if (driver != null){
             driver.quit();
         }
     }
+//    public void tearDown(){
+//        if (driver != null){
+//            driver.quit();
+//        }
+//    }
     public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
