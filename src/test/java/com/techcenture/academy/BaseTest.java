@@ -29,8 +29,8 @@ public class BaseTest {
     protected String browserVersion;
 
 
-    static ExtentReports extentReports;
-    static ExtentTest extentTest;
+    public static ExtentReports extentReports;
+    public static ExtentTest extentTest;
 
     public  ExtentReports getInstance() {
         if(extentReports == null) {

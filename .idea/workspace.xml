@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/utils/ExcelReader.java" afterDir="false" />
+    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov update excel reader Data Driven">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/driver/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/testCases/test1/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/com/techcenture/academy/testCases/test1/LoginTest.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,20 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/aybars/IdeaProjects/group-project-automation-exercise-final/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/ygiterman/IdeaProjects/group-project-automation-exercise/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ygiterman\IdeaProjects\group-project-automation-exercise\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java/com/techcenture/academy" />
     </key>
@@ -71,12 +73,12 @@
       <module name="group-project-automation-exercise-final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.techcenture.academy.*" />
+          <option name="PATTERN" value="com.techcenture.academy.testCases.test1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.techcenture.academy" />
-      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.testCases.test1.LoginTest" />
       <option name="METHOD_NAME" value="loginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -89,12 +91,12 @@
       <module name="group-project-automation-exercise-final" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.techcenture.academy.*" />
+          <option name="PATTERN" value="com.techcenture.academy.testCases.test1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.techcenture.academy" />
-      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.LoginTest" />
+      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.testCases.test1.LoginTest" />
       <option name="METHOD_NAME" value="registerPageTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -133,13 +135,35 @@
       <option name="project" value="LOCAL" />
       <updated>1685637571059</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Yakov update">
+      <created>1685643915635</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685643915635</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Yakov update excel reader Data Driven">
+      <created>1685654206558</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685654206558</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Yakov update excel reader Data Driven">
+      <created>1685654220062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685654220062</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="group project First push" />
     <MESSAGE value="Yakov update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yakov update" />
+    <MESSAGE value="Yakov update excel reader Data Driven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yakov update excel reader Data Driven" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

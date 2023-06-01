@@ -1,6 +1,9 @@
-package com.techcenture.academy;
+package com.techcenture.academy.testCases.test1;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.techcenture.academy.BaseTest;
 import com.techcenture.academy.pages.HomePage;
 import com.techcenture.academy.pages.RegisterPage;
 import com.techcenture.academy.utils.ExcelReader;
@@ -13,10 +16,11 @@ public class LoginTest extends BaseTest {
 
     private HomePage homePage;
 
+
     private RegisterPage registerPage;
     @Test(dataProvider = "CustomerInfo")
     public void loginTest(Map<String,String>data){
-        extentTest = extentReports.startTest("login positive test");
+        extentTest = extentReports.startTest("login positive test: " + data.get("FullName"));
         homePage =new HomePage(driver);
         homePage.navigateToUrl();
         extentTest.log(LogStatus.INFO, "initiate web-driver successfully");

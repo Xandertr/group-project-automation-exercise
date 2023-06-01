@@ -27,7 +27,7 @@ public class Driver {
                     //extra configuration
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--remote-allow-origins=*");
-                  //  options.addExtensions(new File("src/main/resources/1.49.2_0.crx"));
+                    options.addExtensions(new File("src/main/resources/1.49.2_0.crx"));
                     driver = new ChromeDriver(options);
                     break;
                 case "firefox":
