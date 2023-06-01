@@ -45,7 +45,7 @@ public class HomePage {
     public void enterSignUpCredentials(){
         String fullName ="Joseph Greenberg";
         nameInput.sendKeys(fullName);
-        emailAdressInput.sendKeys(fullName.replace(" ",".") + "@gmail.com");
+        emailAdressInput.sendKeys(fullName.replace(" ",".") + "@gmail1.com");
     }
     public void clickSignUpBtn(){
         signUpBtn.click();
