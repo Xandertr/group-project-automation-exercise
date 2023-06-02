@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov update excel reader Data Driven">
+    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov update Test Cases structure and Excel data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/driver/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/driver/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/RegisterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/testCases/test1/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/testCases/test1/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/testCases/test1/LoginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="com.techcenture.academy.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginTest.loginTest">
+  <component name="RunManager" selected="TestNG.LoginTest.registerPageTest">
     <configuration name="LoginTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="group-project-automation-exercise-final" />
       <extension name="coverage">
@@ -107,8 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginTest.loginTest" />
         <item itemvalue="TestNG.LoginTest.registerPageTest" />
+        <item itemvalue="TestNG.LoginTest.loginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -156,14 +156,22 @@
       <option name="project" value="LOCAL" />
       <updated>1685654220062</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Yakov update Test Cases structure and Excel data">
+      <created>1685657861152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685657861152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="group project First push" />
     <MESSAGE value="Yakov update" />
     <MESSAGE value="Yakov update excel reader Data Driven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yakov update excel reader Data Driven" />
+    <MESSAGE value="Yakov update Test Cases structure and Excel data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yakov update Test Cases structure and Excel data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

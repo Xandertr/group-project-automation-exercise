@@ -36,16 +36,19 @@ public class LoginTest extends BaseTest {
         extentTest.log(LogStatus.INFO, "click sign up button");
     }
 
-//    @Test(dataProvider = "CustomerInfo")
-//    public void registerPageTest(Map<String,String>data) throws InterruptedException {
-//        loginTest(data);
-//        registerPage=new RegisterPage(driver);
-//        registerPage.VerifyRegisterPageTitle();
+    @Test(dataProvider = "CustomerInfo")
+    public void registerPageTest(Map<String,String>data) throws InterruptedException {
+          loginTest(data);
+          registerPage=new RegisterPage(driver);
+//          registerPage.pickGenderTitle(data);
+//          registerPage.setPasswordInput(data);
+//          registerPage.selectDateOfBirth(data);
+        registerPage.VerifyRegisterPageTitle();
 //        registerPage.selectCountry();
-//        registerPage.enterAddressCredentials();
+        registerPage.enterAddressCredentials(data);
 //        registerPage.setPasswordInput();
-//        registerPage.clickCreateAccountBtn();
-//    }
+        registerPage.clickCreateAccountBtn();
+    }
     @DataProvider(name = "CustomerInfo")
     public Object[][] getCreateCustomerData(){
         Object[][] reader = new ExcelReader("src/main/resources/Auto-Exercise.xlsx","customer").getData();

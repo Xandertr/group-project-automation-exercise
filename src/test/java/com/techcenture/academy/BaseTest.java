@@ -88,9 +88,9 @@ public class BaseTest {
     public void afterTest(){
         extentReports.flush();
         extentReports.close();
-        if (driver != null){
-            driver.quit();
-        }
+//        if (driver != null){
+//            driver.quit();
+//        }
     }
 //    public void tearDown(){
 //        if (driver != null){

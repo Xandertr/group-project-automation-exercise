@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.List;
+import java.util.Map;
 
 public class RegisterPage {
 
@@ -81,51 +82,58 @@ public class RegisterPage {
         Assert.assertTrue(enterAccountHeader.isDisplayed());
     }
 
-    public void selectDateOfBirth() {
+    public void selectDateOfBirth(Map<String ,String> data) {
         Select selectDays = new Select(daysDropDown);
-        selectDays.selectByVisibleText("1");
+        selectDays.selectByVisibleText(data.get("bDay"));
         Select selectMonths = new Select(monthsDropDown);
-        selectMonths.selectByVisibleText("March");
+        selectMonths.selectByVisibleText(data.get("bMonth"));
         Select selectYears = new Select(yearsDropDown);
-        selectYears.selectByVisibleText("1999");
+        selectYears.selectByVisibleText(data.get("bYear"));
     }
 
-    public void selectCountry() {
+    public void selectCountry(Map<String ,String> data) {
         Select selectCountry = new Select(countryDropDown);
-        selectCountry.selectByIndex(0);
+        countryDropDown.click();
+        selectCountry.selectByVisibleText(data.get("Country"));
 
     }
 
-    public void enterAddressCredentials(){
-        pickGenderTitle();
-        setPasswordInput();
-        selectDateOfBirth();
+
+    public void enterAddressCredentials(Map<String ,String> data){
+        pickGenderTitle(data);
+        setPasswordInput(data);
+        selectDateOfBirth(data);
         if(!newsLetterCheckBox.isSelected()){
             newsLetterCheckBox.click();
         }
         if (!specialOfferCheckBox.isSelected()){
             specialOfferCheckBox.click();
         }
-        firstNameInput.sendKeys("Joseph");
-        lastNameInput.sendKeys("greenberg");
-        companyInput.sendKeys("techcenture");
-        addressInput.sendKeys("123 Washington street");
-        stateInput.sendKeys("Virginia");
-        cityInput.sendKeys("Arlington");
-        zipCodeInput.sendKeys("22145");
-        mobileNumberInput.sendKeys("577777777");
+        firstNameInput.sendKeys(data.get("FirstName"));
+        lastNameInput.sendKeys(data.get("LastName"));
+        companyInput.sendKeys(data.get("Company"));
+        addressInput.sendKeys(data.get("StreetAddress"));
+        selectCountry(data);
+        stateInput.sendKeys(data.get("State"));
+        cityInput.sendKeys(data.get("City"));
+        zipCodeInput.sendKeys(data.get("Zip"));
+        mobileNumberInput.sendKeys(data.get("Phone"));
     }
 
-    public void pickGenderTitle(){
-        titleGenderMr.click();
+    public void pickGenderTitle(Map<String ,String> data){
+        if (data.get("Gender") == "Mr"){
+            titleGenderMr.click();
+        }else {
+            titleGenderMs.click();
+        }
     }
 
-    public void setPasswordInput(){
-        passwordInput.sendKeys("159753");
+    public void setPasswordInput(Map<String ,String> data){
+        passwordInput.sendKeys(data.get("Password"));
     }
 
     public void clickCreateAccountBtn() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(1000);
         createAccountBtn.click();
     }
 
