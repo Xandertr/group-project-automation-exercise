@@ -26,7 +26,7 @@ public class RegisterPage {
     @FindBy(xpath = "//input[@id='id_gender2']")
     protected WebElement titleGenderMs;
 
-    @FindBy(xpath = "//input[@id='id_gender1']")
+    @FindBy(id = "id_gender1")
     protected WebElement titleGenderMr;
 
     @FindBy(xpath = "//select[@name='days']")
@@ -87,6 +87,16 @@ public class RegisterPage {
     public void VerifyEnterAccountHeader() {
       Assert.assertTrue(enterAccountHeader.isDisplayed());
     }
+    public void pickGenderTitle(Map<String ,String> data){
+        if (data.get("Gender").equalsIgnoreCase("Mr")){
+            titleGenderMr.click();
+        }else {
+            titleGenderMs.click();
+        }
+    }
+    public void setPasswordInput(Map<String ,String> data){
+        passwordInput.sendKeys(data.get("Password"));
+    }
 
 
 
@@ -104,18 +114,16 @@ public class RegisterPage {
         countryDropDown.click();
         selectCountry.selectByVisibleText(data.get("Country"));
     }
-
-
-    public void enterAddressCredentials(Map<String ,String> data){
-        pickGenderTitle(data);
-        setPasswordInput(data);
-        selectDateOfBirth(data);
+    public void selectNewsletterSpOffers(){
         if(!newsLetterCheckBox.isSelected()){
             newsLetterCheckBox.click();
         }
         if (!specialOfferCheckBox.isSelected()){
             specialOfferCheckBox.click();
         }
+    }
+
+    public void enterCustomerInfo(Map<String ,String> data){
         firstNameInput.sendKeys(data.get("FirstName"));
         lastNameInput.sendKeys(data.get("LastName"));
         companyInput.sendKeys(data.get("Company"));
@@ -126,19 +134,6 @@ public class RegisterPage {
         zipCodeInput.sendKeys(data.get("Zip"));
         mobileNumberInput.sendKeys(data.get("Phone"));
     }
-
-    public void pickGenderTitle(Map<String ,String> data){
-        if (data.get("Gender") == "Mr"){
-            titleGenderMr.click();
-        }else {
-            titleGenderMs.click();
-        }
-    }
-
-    public void setPasswordInput(Map<String ,String> data){
-        passwordInput.sendKeys(data.get("Password"));
-    }
-
     public void clickCreateAccountBtn() throws InterruptedException {
         Thread.sleep(1000);
         createAccountBtn.click();
