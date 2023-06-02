@@ -1,4 +1,5 @@
 package com.techcenture.academy;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -32,12 +33,13 @@ public class BaseTest {
     public static ExtentReports extentReports;
     public static ExtentTest extentTest;
 
-    public  ExtentReports getInstance() {
-        if(extentReports == null) {
+    public ExtentReports getInstance() {
+        if (extentReports == null) {
             beforeTest();
         }
         return extentReports;
     }
+
     @BeforeTest
     public void beforeTest() {
         extentReports = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentReports.html", true);
@@ -55,54 +57,57 @@ public class BaseTest {
         Capabilities browserCap = ((RemoteWebDriver) driver).getCapabilities();
         browserName = browserCap.getBrowserName();
         browserVersion = browserCap.getBrowserVersion();
+        //extentReports = new ExtentReports(  System.getProperty("user.dir") + "/test-output/ExtentReports.html", true);
         extentReports = getInstance();
         extentReports.addSystemInfo("BROWSER NAME", browserName);
         extentReports.addSystemInfo("BROWSER VERSION", browserVersion);
     }
+
     @AfterMethod
     public void tearDown(ITestResult result) throws IOException {
 
-        if(result.getStatus()==ITestResult.FAILURE){
-            extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getName());
-            extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getThrowable());
+        if (result.getStatus() == ITestResult.FAILURE) {
+            extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getName());
+            extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS " + result.getThrowable());
 
             String screenshotPath = getScreenshot(driver, result.getName());
             extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath));
 
-        }
-        else if(result.getStatus()==ITestResult.SKIP){
+        } else if (result.getStatus() == ITestResult.SKIP) {
             extentTest.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());
-        }
-        else if(result.getStatus()==ITestResult.SUCCESS){
+        } else if (result.getStatus() == ITestResult.SUCCESS) {
             extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
 
         }
 
         extentReports.endTest(extentTest);
 
-//        if (driver != null){
+//        if (driver != null) {
 //            driver.quit();
 //        }
     }
+
     @AfterTest
-    public void afterTest(){
+    public void afterTest() {
         extentReports.flush();
         extentReports.close();
-//        if (driver != null){
-//            driver.quit();
-//        }
-    }
-//    public void tearDown(){
-//        if (driver != null){
+     //   if (driver != null){
+     //       driver.quit();
+        }
+   // }
+
+//    public void tearDown() {
+//        if (driver != null) {
 //            driver.quit();
 //        }
 //    }
+
     public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         String filename = screenshotName + dateName + ".png";
-        String destination =  System.getProperty("user.dir") + "/test-output/" + filename;
+        String destination = System.getProperty("user.dir") + "/test-output/" + filename;
         File finalDestination = new File(destination);
         FileUtils.copyFile(source, finalDestination);
         return filename;

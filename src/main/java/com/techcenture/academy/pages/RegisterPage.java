@@ -77,10 +77,18 @@ public class RegisterPage {
     @FindBy(xpath = "(//button[@type='submit'])[1]")
     protected WebElement createAccountBtn;
 
-    public void VerifyRegisterPageTitle() {
-        String registerPageTitle = driver.getTitle();
-        Assert.assertTrue(enterAccountHeader.isDisplayed());
+    @FindBy(xpath = "//h2[@data-qa='account-created']")
+    protected WebElement AccountCreatedHeader;
+
+    @FindBy(xpath = "//div[@class='pull-right']/a")
+    protected WebElement clickContinueBtn;
+
+
+    public void VerifyEnterAccountHeader() {
+      Assert.assertTrue(enterAccountHeader.isDisplayed());
     }
+
+
 
     public void selectDateOfBirth(Map<String ,String> data) {
         Select selectDays = new Select(daysDropDown);
@@ -95,7 +103,6 @@ public class RegisterPage {
         Select selectCountry = new Select(countryDropDown);
         countryDropDown.click();
         selectCountry.selectByVisibleText(data.get("Country"));
-
     }
 
 

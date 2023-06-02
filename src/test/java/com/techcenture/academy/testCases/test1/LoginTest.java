@@ -43,7 +43,7 @@ public class LoginTest extends BaseTest {
 //          registerPage.pickGenderTitle(data);
 //          registerPage.setPasswordInput(data);
 //          registerPage.selectDateOfBirth(data);
-        registerPage.VerifyRegisterPageTitle();
+        registerPage.VerifyEnterAccountHeader();
 //        registerPage.selectCountry();
         registerPage.enterAddressCredentials(data);
 //        registerPage.setPasswordInput();
