@@ -1,23 +1,16 @@
 package com.techcenture.academy.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
-import java.util.List;
 import java.util.Map;
 
-public class RegisterPage {
-
-    private static WebDriver driver;
+public class RegisterPage extends BasePage{
 
     public RegisterPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+        super(driver);
     }
 
     @FindBy(xpath = "//div[@class='login-form']/h2/b")
@@ -74,14 +67,13 @@ public class RegisterPage {
     @FindBy(id="optin")
     protected WebElement specialOfferCheckBox;
 
-    @FindBy(xpath = "(//button[@type='submit'])[1]")
-    protected WebElement createAccountBtn;
-
-    @FindBy(xpath = "//h2[@data-qa='account-created']")
+       @FindBy(xpath = "//h2[@data-qa='account-created']")
     protected WebElement AccountCreatedHeader;
 
     @FindBy(xpath = "//div[@class='pull-right']/a")
     protected WebElement clickContinueBtn;
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    protected WebElement createAccountBtn;
 
 
     public void VerifyEnterAccountHeader() {

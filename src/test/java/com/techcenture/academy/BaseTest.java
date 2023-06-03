@@ -82,26 +82,16 @@ public class BaseTest {
 
         extentReports.endTest(extentTest);
 
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            Driver.quitDriver();
+            driver = null;
+        }
     }
-
     @AfterTest
     public void afterTest() {
         extentReports.flush();
         extentReports.close();
-     //   if (driver != null){
-     //       driver.quit();
-        }
-   // }
-
-//    public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
-
+    }
     public static String getScreenshot(WebDriver driver, String screenshotName) throws IOException {
         String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
