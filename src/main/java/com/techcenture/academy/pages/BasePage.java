@@ -25,6 +25,8 @@ public class BasePage {
     protected WebElement testCasesBtn;
     @FindBy(xpath = "//div[@class='col-sm-8']/div/ul/li[8]/a")
     protected WebElement contactUsBtn;
+    @FindBy(id = "scrollUp")
+    protected WebElement scrollUpBtn;
 
 
 

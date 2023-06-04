@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov update Test Cases structure and Excel data 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/ProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/verifySubscription.java" afterDir="false" />
+    <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Auto-Exercise.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/verifySubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/verifySubscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2QZybkfKoHc8XcMMj59WLa2l9fm" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -72,7 +72,7 @@
       <recent name="com.techcenture.academy.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.verifySubscription.verifySubscriptionTestCartPage">
+  <component name="RunManager" selected="TestNG.verifySubscription.verifySubscriptionTestHomePage">
     <configuration name="LoginTest.loginTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="group-project-automation-exercise-final" />
       <extension name="coverage">
@@ -101,24 +101,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.techcenture.academy" />
       <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.LoginTest" />
-      <option name="METHOD_NAME" value="registerPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.registerPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="group-project-automation-exercise-final" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.techcenture.academy.testCases.test1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.techcenture.academy" />
-      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.testCases.test1.LoginTest" />
       <option name="METHOD_NAME" value="registerPageTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -163,13 +145,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="verifySubscription.verifySubscriptionTestHomePage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="group-project-automation-exercise-final" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.techcenture.academy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.techcenture.academy" />
+      <option name="MAIN_CLASS_NAME" value="com.techcenture.academy.verifySubscription" />
+      <option name="METHOD_NAME" value="verifySubscriptionTestHomePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.verifySubscription.verifySubscriptionTestHomePage" />
         <item itemvalue="TestNG.verifySubscription.verifySubscriptionTestCartPage" />
         <item itemvalue="TestNG.verifySubscription.verifySubscriptionTest" />
         <item itemvalue="TestNG.LoginTest.registerPageTest (1)" />
         <item itemvalue="TestNG.LoginTest.loginTest (1)" />
-        <item itemvalue="TestNG.LoginTest.registerPageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685740626568</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage">
+      <created>1685811041143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685811041143</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -232,7 +239,8 @@
     <MESSAGE value="Yakov update" />
     <MESSAGE value="Yakov update excel reader Data Driven" />
     <MESSAGE value="Yakov update Test Cases structure and Excel data 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yakov update Test Cases structure and Excel data 3" />
+    <MESSAGE value="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

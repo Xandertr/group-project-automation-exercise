@@ -14,7 +14,7 @@ public class verifySubscription extends BaseTest {
     private HomePage homePage;
 
     @Test(dataProvider = "CustomerInfo")
-    public void verifySubscriptionTestHomePage(Map<String, String> data) {
+    public void verifySubscriptionTestHomePage(Map<String, String> data) throws InterruptedException {
         extentTest = extentReports.startTest("Verify Subscription Test on Home Page for: " + data.get("Email"));
         homePage = new HomePage(driver);
         homePage.navigateToUrl();
@@ -23,8 +23,12 @@ public class verifySubscription extends BaseTest {
         extentTest.log(LogStatus.PASS, "verify title of the home page");
         homePage.verifyTextSubscription();
         extentTest.log(LogStatus.PASS, "verify text SUBSCRIPTION is on the page");
+        homePage.scrollDownToEmailInput();
+        extentTest.log(LogStatus.INFO, "scrolled down to the Enail input box");
+        Thread.sleep(1000);
         homePage.enterSubscriptionEmail(data);
         extentTest.log(LogStatus.INFO, "pass email: " + data.get("Email") + " to the email box");
+        Thread.sleep(1000);
         homePage.arrowBtnClick();
         extentTest.log(LogStatus.INFO, "clicking arrow button and verifying success message");
     }

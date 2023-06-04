@@ -2,8 +2,11 @@ package com.techcenture.academy.pages;
 
 import com.techcenture.academy.config.ConfigReader;
 import com.techcenture.academy.utils.CommonUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -69,6 +72,12 @@ public class HomePage extends BasePage{
     }
     public void cartBtnClick(){
         cartBtn.click();
+    }
+    public void scrollDownToEmailInput(){
+//        Actions actions = new Actions(driver);
+//        actions.moveToElement(textSubscription);
+//        actions.perform();
+        driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL, Keys.END);
     }
     public void productsBtnClick(){
         productsBtn.click();
