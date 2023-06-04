@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a8c18160-870e-4357-af7c-8c998aea4e9f" name="Changes" comment="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techcenture/academy/pages/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/verifySubscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techcenture/academy/verifySubscription.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685811041143</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Yakov updated Base Page, completed 10, and 11.  Extended all pages to BasePage">
+      <created>1685839656355</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685839656355</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
